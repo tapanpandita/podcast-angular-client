@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <h2>{{ podcast.title }}</h2>
+    <div class="row-fluid">
+        <div class="list-group">
+            <!--Body content-->
+            <div ng-repeat="episode in podcast.episodes" class="media list-group-item">
+                <a class="pull-left" href="#">
+                    <img class="media-object" ng-src="{{podcast.image_url}}" alt="{{podcast.title}}" height="64" width="64">
+                </a>
+                <div class="media-body">
+                    <h4 class="media-heading">{{episode.title}}</h4>
+                    {{episode.description}}
+                    <br/>
+                        <a href="{{ episode.url }}">Download</a>
+                    <br/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
